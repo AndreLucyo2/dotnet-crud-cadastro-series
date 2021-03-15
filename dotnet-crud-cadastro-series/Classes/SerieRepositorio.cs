@@ -9,6 +9,9 @@ namespace dotnet_crud_cadastro_series
 {
 	public class SerieRepositorio : IRepositorio<Serie> //implementa a interface
 	{
+		/// <summary>
+		/// Banco de dados em momoria...
+		/// </summary>
 		private List<Serie> listaSerie = new List<Serie>();
 		public void Atualiza(int id, Serie objeto)
 		{
@@ -32,12 +35,12 @@ namespace dotnet_crud_cadastro_series
 
 		public int ProximoId()
 		{
-			return listaSerie.Count;
+			return listaSerie.Count; //retorna o ultimo id - numero de registros
 		}
 
 		public Serie RetornaPorId(int id)
 		{
-			return listaSerie[id];
+			return listaSerie[id];//pega pelo indice da lista
 		}
 	}
 }

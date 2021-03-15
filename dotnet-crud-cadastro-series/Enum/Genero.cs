@@ -5,6 +5,7 @@
 	/// </summary>
 	public enum Genero
 	{
+		Nd = 0,
 		Acao = 1,
 		Aventura = 2,
 		Comedia = 3,
